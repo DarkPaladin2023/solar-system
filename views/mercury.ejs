@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Solar System</title>
+</head>
+<body>
+    <h1 class="bg-info text-white p-3">Lab 5: The Solar System</h1>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark"><!-- this is a navbar and customize as you like -->
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Mercury</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Venus</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Earth</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav> <!-- this is a navbar that we can use in our home page, you can customize it as you like -->
+<div class="container-fluid m-5"> 
+    <div class="card p-4">
+<h2>Mercury</h2>
+    
+<%= mercuryInfo.description %> <!-- here we use the mercuryInfo that we passed from the index.mjs file, and we can use it to display the information of mercury in our mercury.ejs file -->
+</div>
+</div>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="styles.css"> <!-- this will link the styles.css file that we created in the public folder -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    
+ 
+</body>
+</html>
+<!-- only ejs files will be stored in the views folder. all of the images and the styles will be in the public folder -->

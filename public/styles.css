@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(160deg, #0f1f42, #0a1630);
+  color: #edf2ff;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+h1 {
+  font-family: 'Verdana', Geneva, Tahoma, sans-serif;
+  margin: 0;
+}
+
+.navbar {
+  border-bottom: 2px solid rgba(255,255,255,0.15);
+}
+
+.container-fluid {
+  max-width: 1200px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.35);
+}
+
+.card p {
+  line-height: 1.6;
+  color: #f6f9ff;
+}
+
+.planet-image,
+.home-image,
+.pod-image {
+  border: 2px solid #ffc107;
+  margin-top: 10px;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.btn-primary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+footer {
+  font-size: 0.95rem;
+  letter-spacing: 0.0125em;
+}
+
+.alert-warning {
+  background: rgba(255, 210, 90, 0.2);
+  border-color: rgba(255, 190, 30, 0.4);
+}
+
+a.nav-link {
+  color: #d9e7ff !important;
+}
+
+.bg-info {
+  background-color: #0dcaf0 !important;
+}

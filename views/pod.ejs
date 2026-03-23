@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head') %>
+<body>
+<%- include('partials/nav') %>
+
+    <h1 class="bg-info text-white p-3" style="margin: 0;">Lab 5: The Solar System</h1>
+
+<div class="container-fluid my-5">
+  <div class="card p-4">
+    <h2>NASA Picture of the Day</h2>
+    <% if (podError) { %>
+      <div class="alert alert-warning"><%= podError %></div>
+    <% } %>
+    <% if (podData) { %>
+      <h3><%= podData.title %></h3>
+      <p><%= podData.date %></p>
+      <% if (podData.media_type === 'video') { %>
+        <div class="ratio ratio-16x9"><iframe src="<%= podData.url %>" title="NASA POD Video" allowfullscreen></iframe></div>
+      <% } else { %>
+        <img src="<%= podData.url %>" alt="NASA POD" class="img-fluid rounded pod-image">
+      <% } %>
+      <p class="mt-3"><%= podData.explanation %></p>
+    <% } %>
+  </div>
+</div>
+
+<%- include('partials/footer') %>
+<%- include('partials/scripts') %>
+</body>
+</html>

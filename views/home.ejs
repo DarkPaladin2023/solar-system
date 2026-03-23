@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head') %>
+<body>
+<%- include('partials/nav') %>
+
+    <h1 class="bg-info text-white p-3" style="margin: 0;">Lab 5: The Solar System</h1>
+
+<div class="container-fluid my-5">
+  <div class="row g-4">
+    <div class="col-md-6">
+      <div class="card p-4">
+        <h2>Welcome to the Solar System Lab</h2>
+        <p class="lead">Explore planets, asteroids, comets and the NASA Picture of the Day.</p>
+        <p>Select a planet from the menu, or visit NASA POD for daily astronomy updates.</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card p-4 text-center">
+        <h3>Random Pixabay Solar Image</h3>
+        <% if (pixabayImageUrl) { %>
+          <img src="<%= pixabayImageUrl %>" alt="Solar System from Pixabay" class="img-fluid rounded home-image">
+        <% } else { %>
+          <p class="text-danger">Unable to load image right now. Please try again later.</p>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('partials/footer') %>
+<%- include('partials/scripts') %>
+</body>
+</html>
