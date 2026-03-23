@@ -4,11 +4,32 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(160deg, #0f1f42, #0a1630);
+  background:
+    linear-gradient(rgba(2, 10, 24, 0.78), rgba(2, 10, 24, 0.86)),
+    url('/images/tron.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   color: #edf2ff;
   margin: 0;
   padding: 0;
   line-height: 1.6;
+}
+
+.horse-strip {
+  text-align: center;
+  padding: 1rem 0 0.35rem 0;
+}
+
+.horse-icon {
+  font-size: 4rem;
+  line-height: 1;
+  color: #e8f7ff;
+  text-shadow:
+    0 0 6px rgba(120, 220, 255, 0.85),
+    0 0 14px rgba(0, 225, 255, 0.8),
+    0 0 28px rgba(0, 170, 255, 0.6);
+  filter: drop-shadow(0 0 10px rgba(0, 225, 255, 0.55));
 }
 
 h1 {
@@ -17,7 +38,42 @@ h1 {
 }
 
 .navbar {
-  border-bottom: 2px solid rgba(255,255,255,0.15);
+  position: relative;
+  z-index: 2000;
+  border-bottom: 2px solid rgba(80, 220, 255, 0.25);
+  background: rgba(8, 14, 28, 0.9) !important;
+  backdrop-filter: blur(4px);
+}
+
+.navbar .dropdown-menu {
+  z-index: 3000;
+}
+
+.horse-strip {
+  position: relative;
+  z-index: 5;
+  text-align: center;
+  padding: 0.65rem 0 0.25rem 0;
+  pointer-events: none;
+}
+
+.horse-icon {
+  font-size: 4rem;
+  line-height: 1;
+  color: #e8f7ff;
+  text-shadow:
+    0 0 6px rgba(120, 220, 255, 0.85),
+    0 0 14px rgba(0, 225, 255, 0.8),
+    0 0 28px rgba(0, 170, 255, 0.6);
+  filter: drop-shadow(0 0 10px rgba(0, 225, 255, 0.55));
+}
+
+.card,
+.planet-image,
+.home-image,
+.pod-image {
+  position: relative;
+  z-index: 1;
 }
 
 .container-fluid {
@@ -25,15 +81,28 @@ h1 {
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(18, 28, 52, 0.72);
+  border: 1px solid rgba(160, 220, 255, 0.2);
   border-radius: 1rem;
-  box-shadow: 0 10px 35px rgba(0,0,0,0.35);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+  color: #edf6ff;
+}
+
+.card h2,
+.card h3,
+.card h5 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px rgba(70, 200, 255, 0.18);
 }
 
 .card p {
-  line-height: 1.6;
+  line-height: 1.7;
   color: #f6f9ff;
+}
+
+.card p strong {
+  color: #ffffff;
 }
 
 .planet-image,
