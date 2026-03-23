@@ -33,6 +33,12 @@ const SMALL_BODY_GETTERS = {
   comets: planets.getComets
 };
 
+// Better NASA landing pages for small bodies.
+const SMALL_BODY_LINK_OVERRIDES = {
+  asteroids: 'https://science.nasa.gov/solar-system/asteroids/',
+  comets: 'https://science.nasa.gov/solar-system/comets/'
+};
+
 // Local fallback images stored in public/images.
 const LOCAL_IMAGE_FALLBACKS = {
   home: '/images/home-fallback.png',
@@ -119,20 +125,23 @@ function getPlanetData(name) {
   }
 
   if (SMALL_BODY_GETTERS[name]) {
-    const rawSmallBodyData = SMALL_BODY_GETTERS[name]();
+  const rawSmallBodyData = SMALL_BODY_GETTERS[name]();
 
-    return {
-      description: rawSmallBodyData?.def || 'Information about this group of bodies.',
-      distanceFromSun: 'Varies',
-      yearLength: 'N/A',
-      oneEarthDay: 'N/A',
-      radius: 'N/A',
-      moons: 'N/A',
-      items: Array.isArray(rawSmallBodyData?.items) ? rawSmallBodyData.items : null,
-      image: LOCAL_IMAGE_FALLBACKS[name] || rawSmallBodyData?.image || '',
-      websiteLink: rawSmallBodyData?.link || 'https://solarsystem.nasa.gov'
-    };
-  }
+  return {
+    description: rawSmallBodyData?.def || 'Information about this group of bodies.',
+    distanceFromSun: 'Varies',
+    yearLength: 'N/A',
+    oneEarthDay: 'N/A',
+    radius: 'N/A',
+    moons: 'N/A',
+    items: Array.isArray(rawSmallBodyData?.items) ? rawSmallBodyData.items : null,
+    image: LOCAL_IMAGE_FALLBACKS[name] || rawSmallBodyData?.image || '',
+    websiteLink:
+      SMALL_BODY_LINK_OVERRIDES[name] ||
+      rawSmallBodyData?.link ||
+      'https://science.nasa.gov/solar-system/'
+  };
+}
 
   return null;
 }
